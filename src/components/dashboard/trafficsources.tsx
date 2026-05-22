@@ -2,13 +2,25 @@
 
 type Props = {
   data: { label: string; value: number }[];
+  theme: string;
 };
 
-export default function TrafficSources({ data }: Props) {
+export default function TrafficSources({ data, theme }: Props) {
   return (
-    <div className="bg-black text-white p-5 rounded-xl">
+    <div
+      className={`p-5 rounded-xl transition-all duration-300 ${
+        theme === "dark"
+          ? "bg-black text-white"
+          : "bg-white text-black border"
+      }`}
+    >
       <h2 className="text-xl font-bold">Traffic Sources</h2>
-      <p className="text-gray-400 text-sm mb-5">
+
+      <p
+        className={`text-sm mb-5 ${
+          theme === "dark" ? "text-gray-400" : "text-gray-600"
+        }`}
+      >
         Where your visitors come from
       </p>
 
@@ -20,9 +32,15 @@ export default function TrafficSources({ data }: Props) {
               <span>{item.value}%</span>
             </div>
 
-            <div className="w-full bg-gray-800 h-2 rounded">
+            <div
+              className={`w-full h-2 rounded ${
+                theme === "dark" ? "bg-gray-800" : "bg-gray-200"
+              }`}
+            >
               <div
-                className="h-2 bg-pink-500 rounded"
+                className={`h-2 rounded ${
+                  theme === "dark" ? "bg-pink-500" : "bg-blue-500"
+                }`}
                 style={{ width: `${item.value}%` }}
               />
             </div>

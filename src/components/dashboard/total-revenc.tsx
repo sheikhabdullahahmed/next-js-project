@@ -21,14 +21,36 @@ function MiniChart({ data }: { data: number[] }) {
   );
 }
 
-export default function TotalRevenue({ stats }: { stats: Stat[] }) {
+export default function TotalRevenue({
+  stats,
+  theme,
+}: {
+  stats: Stat[];
+  theme: string;
+}) {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
       {stats.map((item, index) => (
-        <div key={index} className="p-4 rounded-xl shadow-md border bg-black text-white">
-          <h2 className="text-gray-400 text-sm">{item.title}</h2>
+        <div
+          key={index}
+          className={`p-4 rounded-xl shadow-md border transition-all duration-300 ${
+            theme === "dark"
+              ? "bg-black text-white border-zinc-800"
+              : "bg-white text-black border-gray-200"
+          }`}
+        >
+          <h2
+            className={`text-sm ${
+              theme === "dark" ? "text-gray-400" : "text-gray-500"
+            }`}
+          >
+            {item.title}
+          </h2>
+
           <h1 className="text-2xl font-bold mt-2">{item.value}</h1>
+
           <p className="text-green-500 text-sm">{item.change}</p>
+
           <MiniChart data={item.data} />
         </div>
       ))}

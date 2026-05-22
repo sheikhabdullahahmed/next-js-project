@@ -72,19 +72,19 @@ export default function Page() {
       </div>
 
       {/* 1. Stats Cards */}
-      <TotalRevenue stats={stats} />
+      <TotalRevenue stats={stats} theme= {theme} />
 
       {/* 2. Charts */}
       <div className="grid lg:grid-cols-2 gap-4">
-        <OverviewChart data={dashboard.revenue} />
-        <TrafficSources data={dashboard.traffic} />
+        <OverviewChart data={dashboard.revenue} theme={theme} />
+        <TrafficSources data={dashboard.traffic} theme={theme} />
       </div>
 
       {/* 3. Goals */}
-      <MonthlyGoals data={dashboard.goals} />
+      <MonthlyGoals data={dashboard.goals} theme={theme} />
 
       {/* 4. Recent Orders */}
-      <RecentOrders orders={orders} />
+      <RecentOrders orders={orders} theme={theme} />
     </div>
   );
 }
