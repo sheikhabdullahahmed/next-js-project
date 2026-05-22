@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Total Revenue",
+    "value": "$12,450",
+    "change": "+12%",
+    "data": [120, 200, 150, 300, 250, 400]
+  },
+  {
+    "title": "Active Users",
+    "value": "1,240",
+    "change": "+8%",
+    "data": [50, 80, 70, 120, 100, 140]
+  },
+  {
+    "title": "Total Orders",
+    "value": "320",
+    "change": "+5%",
+    "data": [20, 40, 30, 60, 50, 80]
+  },
+  {
+    "title": "Page Views",
+    "value": "8,540",
+    "change": "+18%",
+    "data": [300, 500, 400, 700, 600, 900]
+  }
+]

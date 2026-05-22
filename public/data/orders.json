@@ -1,0 +1,23 @@
+[
+  {
+    "id": "#ORD-1001",
+    "customer": "Ali Khan",
+    "date": "2026-05-20",
+    "status": "Completed",
+    "amount": "$120"
+  },
+  {
+    "id": "#ORD-1002",
+    "customer": "Sara Ahmed",
+    "date": "2026-05-21",
+    "status": "Pending",
+    "amount": "$250"
+  },
+  {
+    "id": "#ORD-1003",
+    "customer": "John Smith",
+    "date": "2026-05-22",
+    "status": "Cancelled",
+    "amount": "$90"
+  }
+]
